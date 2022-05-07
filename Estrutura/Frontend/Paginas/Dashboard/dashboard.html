@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/Recursos/img/Selettra.ico">
+
+    <link href="/Paginas/Dashboard/css/dashboardcss.css" rel="stylesheet">
+    <link href="/Paginas/Dashboard/css/app.css" rel="stylesheet">
+	<link href="/Recursos/css/menu.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div id="meuMenu" class="menu">
+            <img id="img-menu" class="logoMenu" src="/Recursos/img/Logo_Selettra_Vertical_Branco.png" onclick="openNav()">
+            <a name="textMenu" class="op" href="/Paginas/Dashboard/dashboard.html"><i class='bx bx-home-alt-2'></i>Home</a>
+            <a name="textMenu" class="op" href="/Setores/html/setores.html"><i class='bx bx-buildings'></i>Setores</a>
+            <a class="op" href="#"><i class='bx bx-customize'></i>Adicionar</a>
+            <a class="op" href="#"><i class='bx bx-archive-in'></i>Inativos</a>
+            <a class="op" href="#"><i class='bx bx-cog'></i>Configurações</a>
+            <a class="op" href="#"><i class='bx bx-exit'></i>Sair</a>
+        </div>
+    </header>  
+    <div class="wrapper">
+		<div id="main" class="main">
+			<main class="content">
+				<div class="container-fluid p-0">
+					<div class="row">
+						<div class="col-md-8">
+							<!--Card Ativos-->
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col mt-0">
+											<h5 class="card-title">Colaboradores Ativos</h5>
+										</div>
+										<div class="col-auto">
+											<div class="stat text-primary">
+												<i class="align-middle" data-feather="users"></i>
+											</div>
+										</div>
+									</div>
+									<h1 class="mt-1 mb-3">2.382</h1>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<!--Card Inativos-->
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col mt-0">
+											<h5 class="card-title">Inativos</h5>
+										</div>
+
+										<div class="col-auto">
+											<div class="stat text-primary">
+												<i class="align-middle" data-feather="users"></i>
+											</div>
+										</div>
+									</div>
+									<h1 class="mt-1 mb-3">1.212</h1>
+									<div class="mb-0">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!--Calendario-->
+					<div class="col-12 col-md-6 col-xxl-6 d-flex order-1 order-xxl-1">
+						<div class="card flex-fill">
+							<div class="card-header">
+
+								<h5 class="card-title mb-0">Calendário</h5>
+							</div>
+							<div class="card-body d-flex">
+								<div class="align-self-center w-100">
+									<div class="chart">
+										<div id="datetimepicker-dashboard"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--Grafico Colaboradores por Setor-->
+					<div class="col-12 col-md-6 col-xxl-6 d-flex order-2 order-xxl-3">
+						<div class="card flex-fill w-100">
+							<div class="card-header">
+								<h5 class="card-title mb-0">Colaboradores por Setor</h5>
+							</div>
+							<div class="card-body d-flex">
+								<div class="align-self-center w-100">
+									<div class="py-3">
+										<div class="chart chart-xs">
+											<canvas id="chartjs-dashboard-pie"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+		<div class="row">
+			<!--Grafico Colaboradores por Mês-->
+			<div class="col-xl-12 col-xxl-12">
+				<div class="card flex-fill w-100">
+					<div class="card-header">
+						<h5 class="card-title mb-0">Colaboradores por Ano</h5>
+					</div>
+					<div class="card-body py-3">
+						<div class="chart chart-sm">
+							<canvas id="chartjs-dashboard-line"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+			</main>
+		</div>
+	</div>
+	
+
+    <footer class="fot text-end">
+        <h4>Desenvolvido pela Equipe Techsystem</h4>
+    </footer>
+</body>
+<script src="/Paginas/Dashboard/js/graficos.js" defer></script>
+<script src="/Recursos/js/menu.js"></script>
+<script src="/Paginas/Dashboard/js/app.js" defer></script>
+</html>

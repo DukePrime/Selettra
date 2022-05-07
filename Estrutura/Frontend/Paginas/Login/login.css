@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    
+}
+body {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%);
+}
+.main{
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    text-align: center;
+}
+.logo-login{
+    margin:  2vw;
+    width: 30vw;
+}
+.login{
+    margin: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;    
+}
+.login input{
+    border-radius: 0.7vw;
+    outline: none;
+    border: 0;
+    font-size: 1.5vw;
+    font-family: 'Oswald', sans-serif;
+    padding: 0.7vw 1.5vw;
+    margin: 0.5vw;
+    border: solid #BDBDBD 0.1vw; 
+	box-shadow: 0 0.2vw 0.7vw rgba(77, 77, 77, 0.3) inset; 
+	-webkit-box-shadow: 0 0.2vw 0.7vw rgba(77, 77, 77, 0.3) inset; 
+	-moz-box-shadow: 0 0.2vw 0.7vw rgba(77, 77, 77, 0.3) inset; 
+}
+label{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2vw;
+}
+.entrar{
+    margin: 0.5vw;
+    background: rgb(222,222,222);
+    background: radial-gradient(circle, rgba(222,222,222,1) 0%, rgba(219,219,219,1) 100%);
+    border-radius: 10px;
+    width: 30vw;
+    height: 5vw;
+    font-size: 2.2vw;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Bebas Neue', bold;
+    box-shadow: 0 0.5vw 0.9vw rgba(194, 194, 194, 1)  ; 
+	-webkit-box-shadow: 0 0.5vw 0.9vw rgba(194, 194, 194, 1)  ; 
+	-moz-box-shadow: 0 0.5vw 0.9vw rgba(194, 194, 194, 1)  ;
+}
+p {
+    padding: 2%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3vw;
+}
+.fa-eye{
+    padding: 1%;
+}
