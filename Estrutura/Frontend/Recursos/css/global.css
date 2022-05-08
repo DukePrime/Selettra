@@ -1,0 +1,120 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .fot{
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+  }
+  
+  .returnInicial {
+    position: absolute;
+    top: 8%;
+    right: 9%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6vw;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .return-Ini {
+    padding: 0.3vw;
+    color: #A2281C;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  .returnPage {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 3.3vw;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .return-page {
+    color: #A2281C;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+  
+  }
+  
+  .search {
+    width: 100%;
+    display: flex;
+    align-content: center;
+  }
+  
+  .searchTerm {
+    font-size: 1vw;
+    font-family: 'Oswald';
+    font-style: normal;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: inset 0 0 0.3vw 0.1vw rgba(0, 0, 0, 0.25);
+    border-radius: 0.7vw 0 0 0.7vw;
+    border: none;
+    padding-left: 1vw;
+    outline: none;
+    color: rgba(0, 0, 0, 0.35);
+  }
+  
+  .searchTerm:focus {
+    color: #000000;
+  }
+  
+  .searchButton {
+    width: 3vw;
+    height: 2.4vw;
+    border: 0.07vw solid #A2281C;
+    background: #A2281C;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 0 1.1vw 1.1vw 0;
+    cursor: pointer;
+    font-size: 1.5vw;
+  
+  }
+  
+  .searchbox {
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .bx-search {
+    text-align: center;
+  }
+  
+  
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: 10px;
+    scrollbar-color: #a2281c #ffffff;
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+    box-shadow: inset 0 0 0.3vw 0.1vw rgba(0, 0, 0, 0.35);
+    border-radius: 0.2vw;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #a2281c;
+    
+    border: 0.22vw solid #a2281c;
+  }

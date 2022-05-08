@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/Recursos/img/Selettra.ico">
+
+    <link href="/Recursos/css/app.css" rel="stylesheet">
+    <link href="/Paginas/AdicionarColaborador/css/addColab.css" rel="stylesheet">
+    <link href="/Recursos/css/menu.css" rel="stylesheet">
+    <link href="/Recursos/css/global.css" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Adicionar Colaborador</title>
+</head>
+
+<body>
+    <header>
+        <div id="meuMenu" class="menu">
+            <img id="img-menu" class="logoMenu" src="/Recursos/img/Logo_Selettra_Vertical_Branco.png"
+                onclick="openNav()">
+            <a class="op" href="/Paginas/Dashboard/dashboard.html"><i class='bx bx-home-alt-2'></i>Home</a>
+            <a class="op" href="/Paginas/Setores/setores.html"><i class='bx bx-buildings'></i>Setores</a>
+            <a class="op" href="/Paginas/AdicionarColaborador/addColab.html"><i class='active bx bx-customize'></i>Adicionar</a>
+            <a class="op" href="/Paginas/Inativos/inativos.html"><i class='bx bx-archive-in'></i>Inativos</a>
+            <a class="op" href="#"><i class='bx bx-cog'></i>Configurações</a>
+            <a class="op" href="#"><i class='bx bx-exit'></i>Sair</a>
+        </div>
+        <div class="returnInicial">
+            <a class="return-Ini" href="#">
+                <i class='bx bxs-home'></i>
+            </a>
+        </div>
+        <div class="returnPage">
+            <a class='return-page' href="javascript: history.go(-1)">
+                <i class='bx bx-arrow-back'></i>
+            </a>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div id="main" class="main">
+            <main class="content">
+                <div class="round card">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <form action=" ">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <h1>Adicionar Colaborador</h1>
+                                        </div>
+                                        <div class="col-md-3 text-end">
+                                            <input class="btnAdd" type="submit" value="Adicionar Colaborador">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="container-fluid">
+                                        <div class="add row">
+                                            <h2>Dados:</h2>
+                                            <div class="col-md-2">
+                                                <label class="col-form-label" for="txtMatricula">Matricula:</label>
+                                                <input type="number" id="txtMatricula">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="col-form-label" for="txtName">Nome completo:</label>
+                                                <input type="text" id="txtName">
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="col-form-label" for="txtCargo">Cargo:</label>
+                                                <input type="text" id="txtCargo">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="col-form-label" for="setorFunc">Setor:</label>
+                                                <select name="setor" id="setorFunc">
+                                                    <option>Selecione...</option>
+                                                    <option value="Rh">RH</option>
+                                                    <option value="Financeiro">Financeiro</option>
+                                                    <option value="Sgi">SGI</option>
+                                                    <option value="Suprimentos">Suprimentos</option>
+                                                    <option value="Almoxarifado">Almoxarifado</option>
+                                                    <option value="Comercial">Comercial </option>
+                                                    <option value="Engenharia">Engenharia</option>
+                                                    <option value="Operações">Operações</option>
+                                                    <option value="Fabrica">Fabrica </option>
+                                                    <option value="Pcp">PCP </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="col-form-label" for="txtAdmissao">Admissão:</label>
+                                                <input type="date" id="txtAdmissao">
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="col-form-label" for="txtSalario">Salário:</label>
+                                                <!--Formata valores em R$-->
+                                                <input type="text" id="txtSalario" onkeyup="formatarMoeda();">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="col-form-label" for="contratoPeric">Periculosidade</label>
+                                                <select name="periculosidade" id="contratoPeric">
+                                                    <option>Selecione...</option>
+                                                    <option>Sim</option>
+                                                    <option>Não</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="col-form-label" for="contratoFunc">Contrato</label>
+                                                <select name="Contrato" id="contratoFunc">
+                                                    <option>Selecione...</option>
+                                                    <option>Ativo</option>
+                                                    <option>Inativo</option>
+                                                </select>
+                                            </div>
+                                            <div class="container-fluid">
+                                                <div class="add row">
+                                                    <h2 class="sub">Sistema:</h2>
+                                                    <div class="col-md-5">
+                                                        <label class="col-form-label" for="acessoColab">Esse colaborador
+                                                            deverá ter acesso a plataforma:</label>
+                                                        <select name="acesso" id="acesso" onchange="acessoSistema()">
+                                                            <option value="0">Selecione...</option>
+                                                            <option value="1">Sim</option>
+                                                            <option value="2">Não</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <label class="col-form-label" for="nivelAcesso">Informe o nivel
+                                                            de acesso:</label>
+                                                        <select name="credAcesso" id="nivAcesso" disabled>
+                                                            <option value="0">Selecione...</option>
+                                                            <option>Nível 1 (consulta)</option>
+                                                            <option>Nível 2 (administrador)</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <label class="col-form-label" for="txtSenha">Senha:</label>
+                                                        <input name="credAcesso" type="text" id="txtSenha" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer class="fot text-end">
+        <h4>Desenvolvido pela Equipe Techsystem</h4>
+    </footer>
+
+</body>
+<script src="/Recursos/js/menu.js"></script>
+<script src="/Paginas/AdicionarColaborador/js/moeda.js"></script>
+
+</html>

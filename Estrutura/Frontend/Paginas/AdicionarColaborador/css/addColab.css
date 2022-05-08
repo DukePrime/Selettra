@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Oswald&display=swap');
+
+.round{
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1); 
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+}
+.sub{
+  margin-top: 1rem;
+}
+.add{
+  align-items: center;
+  justify-content: center;
+}
+
+.add input:disabled,select:disabled{
+  opacity: 0.3;
+
+}
+
+.add input, select {
+  transition: 0.3s;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 4px 2px rgba(110, 110, 110, 0.25);
+  font-size: 15px;
+  color: #7F7F7F;
+  cursor: pointer;
+}
+.add select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 0.85rem center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+}
+
+input[type=submit]{
+  font-size: 20px;
+  text-align: center;
+  background-color: #a2281c;
+  color: white;
+
+  width: auto;
+  height: 50px;
+  padding: 0 20px 0;
+  border: none;
+  border-radius: 1.2vw;
+  box-shadow: 0 0 0.3vw 0.1vw rgba(0, 0, 0, 0.35);
+}
